@@ -2,7 +2,7 @@ import React from 'react';
 import './login1.css';
 const Login1 = () => {
   return (
-   
+   <React.Fragment>
     <div className="outerbox">
         <div className="innerbox">
             <header className="signup-header">
@@ -41,7 +41,7 @@ const Login1 = () => {
             </div>
         </div>
     </div>
-   
+    </React.Fragment>
   )
 }
 
