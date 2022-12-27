@@ -1,15 +1,13 @@
-import React from 'react';
-import './login1.css';
-const Login1 = () => {
+import React from 'react'
+import './login.css';
+const Login = () => {
   return (
-   <React.Fragment>
+    <div>
     <div className="outerbox">
         <div className="innerbox">
-            <header className="signup-header">
-                <h1>Sign Up</h1>
-            </header>
+            
+    <div className='loginbody'>
 
-            <div className="signup-body">
                 <form action="#">
                     <p>
                         <label for="username">UserName</label>
@@ -21,28 +19,27 @@ const Login1 = () => {
                     </p>
                     <p>
                         <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Atleast 8 characters" />
+                        <input type="password" id="password"/>
                     </p>
+                   
                     <p>
-                        <label for="cpassword">Confirm Password</label>
-                        <input type="cpassword" id="cpassword" />
-                    </p>
-                    <p>
-                        <input type="submit" value="Create Account" id="submit" />
+                        <input type="submit" value="login" id="submit" />
                     </p>    
                 </form>
-
+                </div>
                 <div className="signup-footer">
                     <p>
-                        Already have an Account? <a href="#">login</a>
+                       Don't have an account?<a href="#">Sign up</a>
                     </p>
                 </div>
 
             </div>
-        </div>
+            </div>
+    
+    
+   
     </div>
-    </React.Fragment>
   )
 }
 
-export default Login1
+export default Login

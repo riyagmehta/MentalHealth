@@ -1,10 +1,11 @@
-import Login1 from "./login/Login1";
+import Register from "./components/Register";
+import Login from "./components/Login";
 function App() {
   return (
     
     
     <div>
-     <Login1 />
+    <Register />
     </div>
     
   );
