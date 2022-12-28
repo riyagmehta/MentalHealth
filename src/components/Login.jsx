@@ -5,21 +5,20 @@ const Login = () => {
     <div>
     <div className="outerbox">
         <div className="innerbox">
-            
+        <header className="login-header">
+                <h1>Login</h1>
+            </header>
     <div className='loginbody'>
 
                 <form action="#">
+                    
                     <p>
-                        <label for="username">UserName</label>
-                        <input type="text" id="username" />
+                        <label for="email"> Email</label>
+                        <input type="email" id="email" placeholder='Enter your Email'/>
                     </p>
                     <p>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" />
-                    </p>
-                    <p>
-                        <label for="password">Password</label>
-                        <input type="password" id="password"/>
+                        <label for="password"> Password</label>
+                        <input type="password" id="password" placeholder='Enter your Password'/>
                     </p>
                    
                     <p>

@@ -5,7 +5,7 @@ function App() {
     
     
     <div>
-    <Register />
+    <Login />
     </div>
     
   );
