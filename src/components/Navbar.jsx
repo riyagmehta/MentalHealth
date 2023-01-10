@@ -1,32 +1,57 @@
-import React from 'react'
-import './navbar.css';
-import logo from './Logo.jpg';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import "./navbar.css";
+
+
+
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
-   <div> <nav className='Navbarcontainer'>
-   <div className='wrapper'>
-    
- <div className='Logo'>Mind Matter</div>
- <ul className='links'>
-        <li  className='link'>Home</li>
+    <>
+      <nav className="main-nav">
+       
+        <div className="logo">
+          <h2>
+            <span>M</span>ind
+            <span>M</span>atter
+          </h2>
+        </div>
+
+       
+        <div
+          className={
+            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
+          }>
+          <ul className="links">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Articles</a>
+            </li>
+            <li>
+              <a href="#">Podcasts</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+       
         
-        <li className='link'>Consultancy</li>
-        <li className='link' >Articles</li>
-        
-        <li className='link'>Podcasts</li>
-        <li className='link'>Blog</li>
-    </ul>
+        <div className="loginb" >
+          <button className="button">Sign up</button>
+          <button className="button" >Login</button>
+</div>
+          
+          
+      </nav>
 
-<span ><button className='Button'>Sign Up</button></span>
-  
-   
+      
+    </>
+  );
+};
 
-  </div>
-
-    </nav>
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;
