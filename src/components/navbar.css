@@ -1,237 +1,133 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Jost", sans-serif;
-  }
-  
-  html {
-    font-size: 62.5%;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  /* 
-   
-  /* navbar style start  */
-  
-  .main-nav {
-    width: 100%;
-    height: 10rem;
-    display: grid;
-    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-      background-color: rgb(5, 59, 106);
-  }
-  
-  .logo {
-    display: grid;
-    /* background-color: #3b5998; */
-    grid-column: 2/3;
-    justify-content: start;
-    align-items: center;
-  }
-  
-  .menu-link {
-    grid-column: 3/4;
-  }
-  
-  .menu-link ul {
-    height: 10rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
- 
-  
-  
-  
-  /* ----------- Grid part ends ----------------- */
-  
-  .logo h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    background: -webkit-linear-gradient(rgb(101, 106, 255), rgb(207, 204, 255));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .logo h2 span {
-    font-size: 3.5rem;
-  }
-  
-  .menu-link ul li {
-    font-size: 1.8rem;
-  }
-  
-  .menu-link ul li a {
-    text-transform: capitalize;
-    color: rgb(255, 255, 255);
-    transition: 0.5s;
-  }
-  .menu-link ul li:hover > a {
-    transform-origin: left;
-    color: rgb(178, 210, 231);
-    text-decoration: underline;
-    transition: 0.5s;
-  }
-  
- 
-  
- 
-  
-  .hero-section {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .hero-section p {
-    font-size: 3rem;
-    text-transform: capitalize;
-  }
-  
-  .hero-section h1 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  
-  @media(max-width: 1080px) {
-    .main-nav {
-      height: 8rem;
-      grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
-    }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    .logo,
-    .menu-link ul,
-     {
-      height: 8rem;
-    }
+body{
+  height: 1000px;
+}
+
+.nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: 'Salsa', cursive;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.8);
+  color: rgb(255, 255, 255);
+  /* Created with https://www.css-gradient.com */
+background: rgba(26, 43, 213, 1.0);
+background: -webkit-linear-gradient(bottom, rgba(26, 43, 213, 1.0), rgba(68, 97, 136, 1.0));
+background: -moz-linear-gradient(bottom, rgba(26, 43, 213, 1.0), rgba(68, 97, 136, 1.0));
+background: linear-gradient(to top, rgba(26, 43, 213, 1.0), rgba(68, 97, 136, 1.0));
+}
+ 
+
+
+.hamburger{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  font-size: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  height: 3px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.logo-nav{
+  font-size: 20px;
+  cursor: pointer;
+  padding:10px;
+  margin-bottom: auto;
+}
+
+.nav-links{
+  display: flex;
+  justify-items: center;
+  padding:10px;
+  margin-bottom: auto;
+}
+
+li{
+  padding: 0 10px;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+a:hover{
+  color:rgb(137, 203, 221);
+}
+
+.show-links{
+  display: none;
+  text-align: center;
+  background-color: #1257b0;
+  position: fixed;
+  width: 200px;
+  
+  right: 0;
+}
+.Button{
+  display:flex;
+  align-items: flex-end;
+  padding:10px;
+  margin-bottom: auto;
+}
+.button {
+   width:80px;
+  border-radius: 15px;
+  border-color:turquoise;
+  color: rgb(0, 45, 128);
+  /* Created with https://www.css-gradient.com */
+/* Created with https://www.css-gradient.com */
+background: rgba(251, 254, 255, 1.0);
+background: -webkit-linear-gradient(bottom, rgba(251, 254, 255, 1.0), rgba(180, 212, 229, 1.0));
+background: -moz-linear-gradient(bottom, rgba(251, 254, 255, 1.0), rgba(180, 212, 229, 1.0));
+background: linear-gradient(to top, rgba(251, 254, 255, 1.0), rgba(180, 212, 229, 1.0));
+margin:5px;
+padding:8px;
+  
+
+}
+
+
+
+@media (max-width: 750px) {
+  .nav {
+      padding: 20px;
+      justify-content: space-between;
   }
   
- 
-  @media (max-width: 998px) {
-    .main-nav {
-      height: 7rem;
-      grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
-    }
-  
-    .menu-link {
+  .nav-links{
       display: none;
-    }
-  
-    .logo,
-     {
-      height: 7rem;
-    }
-  
-    .mobile-menu-link {
-      grid-column: 2/4;
-      position: relative;
-      z-index: 99;
-    }
-  
-    .mobile-menu-link {
-      background-color: white;
-      height: 20rem;
-      display: grid;
-      grid-column: 2/5;
-      align-items: center;
-      padding-left: 3rem;
-      transition: all 2s linear;
-      transform-origin: top;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    }
-  
-    .mobile-menu-link ul {
-      height: 20rem;
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
-      align-items: start;
-    }
-  
-    .mobile-menu-link ul li:first-child {
-      transition-delay: 0.2s;
-    }
-  
-}
-  
-  @media (max-width: 798px) {
-    .main-nav {
-      height: 6rem;
-      grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
-    }
-  
-    .logo
-     {
-      height: 6rem;
-    }
-}
-    
-  
-  @media (max-width: 520px) {
-    .main-nav {
-      height: 6rem;
-      grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
-    }
-  
-    .logo {
-      height: 6rem;
-    }
-  
-    .logo h2 {
-      font-size: 2rem;
-    }
-  
-
-   
-  
-    .hero-section h1 {
-      font-size: 3.8rem;
-    }
   }
-  .loginb{
-    display:flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-    margin-top: 10px;
-  
-  
-    
 
-   }
-   .button
-   {
-     display:flex;
-     justify-content: center;
-     align-items: center;
-     font-size: medium;
-       border-style: none;
-       margin:10px;
-       padding:10px;
-       width:100px;
-       height:50px;
-       background-color:r rgb(0, 81, 128);
-       color:rgb(0, 140, 255);
-       font-weight: bold;
-       border-radius: 10px;
-       border-style: none;
-       cursor: pointer;
-       
-   }
-  
+  .hamburger{
+      display: flex;
+  }
+  .button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  li{
+      padding: 10px;
+  }
+
+  .show-links{
+      display: block;
+  }
+}

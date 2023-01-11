@@ -1,56 +1,64 @@
 import React, { useState } from "react";
 import "./navbar.css";
 
-
+import { FaBars } from "react-icons/fa";
+import {FaTimesCircle } from "react-icons/fa";
 
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [showMediaIcons, setShowMediaIcons] = useState(false);
-  return (
-    <>
-      <nav className="main-nav">
-       
-        <div className="logo">
-          <h2>
-            <span>M</span>ind
-            <span>M</span>atter
-          </h2>
-        </div>
+  const [hamburger, setHamburger] = React.useState(true);
 
-       
-        <div
-          className={
-            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }>
-          <ul className="links">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Articles</a>
-            </li>
-            <li>
-              <a href="#">Podcasts</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-          </ul>
-        </div>
+  const hamburgerHandle = () =>{
+      setHamburger(!hamburger)
+  };
 
-       
-        
-        <div className="loginb" >
-          <button className="button">Sign up</button>
-          <button className="button" >Login</button>
-</div>
+  return(
+
+      <div className="h-full">
           
-          
-      </nav>
+          <nav className="nav">
 
-      
-    </>
+              <p className="logo-nav">Company</p>
+
+              <p onClick={hamburgerHandle} className="hamburger">
+                  {hamburger === true &&
+                      <FaBars/>
+                  }
+
+                  {hamburger === false &&
+                    < FaTimesCircle/>
+                  }
+              </p>
+
+              <ul className="nav-links">
+                  <li><a href="/" target="_blank" rel="noreferrer">Home</a></li>
+                  <li><a href="/" target="_blank" rel="noreferrer">Articles</a></li>
+                  <li><a href="/" target="_blank" rel="noreferrer">Podcasts</a></li>
+                  <li><a href="/" target="_blank" rel="noreferrer">Consultancy</a></li>
+                  <li><a href="/" target="_blank" rel="noreferrer">Journal Writing</a></li>
+                  
+              </ul>
+
+              <div className="Button">
+                <button className="button">Login</button>
+                <button className="button">Sign up</button>
+              </div>
+          </nav>
+          
+              { hamburger === false &&
+                  <div className="show-links">
+                      <ul>
+                      <li><a href="/" target="_blank" rel="noreferrer">Home</a></li>
+                  <li><a href="/" target="_blank" rel="noreferrer">Articles</a></li>
+                  <li><a href="/" target="_blank" rel="noreferrer">Podcasts</a></li>
+                  <li><a href="/" target="_blank" rel="noreferrer">Consultancy</a></li>
+                  <li><a href="/" target="_blank" rel="noreferrer">Journal Writing</a></li>
+                      </ul>
+                  </div>
+              }
+
+      </div>
   );
 };
 
