@@ -1,64 +1,115 @@
-import React, { useState } from "react";
+import React from "react";
 import "./navbar.css";
 
-import { FaBars } from "react-icons/fa";
-import {FaTimesCircle } from "react-icons/fa";
-
-import { NavLink } from "react-router-dom";
-
 const Navbar = () => {
-  const [hamburger, setHamburger] = React.useState(true);
-
-  const hamburgerHandle = () =>{
-      setHamburger(!hamburger)
-  };
-
-  return(
-
-      <div className="h-full">
-          
-          <nav className="nav">
-
-              <p className="logo-nav">Company</p>
-
-              <p onClick={hamburgerHandle} className="hamburger">
-                  {hamburger === true &&
-                      <FaBars/>
-                  }
-
-                  {hamburger === false &&
-                    < FaTimesCircle/>
-                  }
-              </p>
-
-              <ul className="nav-links">
-                  <li><a href="/" target="_blank" rel="noreferrer">Home</a></li>
-                  <li><a href="/" target="_blank" rel="noreferrer">Articles</a></li>
-                  <li><a href="/" target="_blank" rel="noreferrer">Podcasts</a></li>
-                  <li><a href="/" target="_blank" rel="noreferrer">Consultancy</a></li>
-                  <li><a href="/" target="_blank" rel="noreferrer">Journal Writing</a></li>
-                  
+  return (
+    <>
+      <nav className='main-nav flex'>
+       <div className="logo">Mind Matter</div>
+        
+        <ul className='nav-links flex'>
+          <li>
+            <a href='#' className='nav-title'>
+              Mental Health A-Z
+              <ul className='nav-sub'>
+                <li>
+                  <a href='#'>Mental</a>
+                </li>
+                <li>
+                  <a href='#'>happiness</a>
+                </li>
+                <li>
+                  <a href='#'>depression</a>
+                </li>
+                <li>
+                  <a href='#'>anxiety</a>
+                </li>
               </ul>
-
-              <div className="Button">
+            </a>
+          </li>
+          <li>
+            <a href='#' className='nav-title'>
+              Self-Improvement
+              <ul className='nav-sub'>
+                <li>
+                  <a href='#'>Mental</a>
+                </li>
+                <li>
+                  <a href='#'>happiness</a>
+                </li>
+                <li>
+                  <a href='#'>depression</a>
+                </li>
+                <li>
+                  <a href='#'>anxiety</a>
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href='#' className='nav-title'>
+              Pyscology
+              <ul className='nav-sub'>
+                <li>
+                  <a href='#'>Mental</a>
+                </li>
+                <li>
+                  <a href='#'>happiness</a>
+                </li>
+                <li>
+                  <a href='#'>depression</a>
+                </li>
+                <li>
+                  <a href='#'>anxiety</a>
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href='#' className='nav-title'>
+              Podcast
+              <ul className='nav-sub'>
+                <li>
+                  <a href='#'>Mental</a>
+                </li>
+                <li>
+                  <a href='#'>happiness</a>
+                </li>
+                <li>
+                  <a href='#'>depression</a>
+                </li>
+                <li>
+                  <a href='#'>anxiety</a>
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href='#' className='nav-title'>
+              About us
+              <ul className='nav-sub'>
+                <li>
+                  <a href='#'>Mental</a>
+                </li>
+                <li>
+                  <a href='#'>happiness</a>
+                </li>
+                <li>
+                  <a href='#'>depression</a>
+                </li>
+                <li>
+                  <a href='#'>anxiety</a>
+                </li>
+              </ul>
+            </a>    
+          </li>
+        </ul>
+        <div className="Button">
                 <button className="button">Login</button>
                 <button className="button">Sign up</button>
               </div>
-          </nav>
-          
-              { hamburger === false &&
-                  <div className="show-links">
-                      <ul>
-                      <li><a href="/" target="_blank" rel="noreferrer">Home</a></li>
-                  <li><a href="/" target="_blank" rel="noreferrer">Articles</a></li>
-                  <li><a href="/" target="_blank" rel="noreferrer">Podcasts</a></li>
-                  <li><a href="/" target="_blank" rel="noreferrer">Consultancy</a></li>
-                  <li><a href="/" target="_blank" rel="noreferrer">Journal Writing</a></li>
-                      </ul>
-                  </div>
-              }
-
-      </div>
+      </nav>
+    </>
   );
 };
 

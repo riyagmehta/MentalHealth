@@ -5,17 +5,11 @@ import Section from '../components/Section'
 
 const Home = () => {
   return (<>
-    <body class="flex flex-col min-h-screen ">
-  <header>
-   <Navbar/>
-  </header>
-  <main class="flex-grow">
-    <Section/>
-  </main>
-  <footer>
-   <Footer/>
-  </footer>
-</body>
+  <header><Navbar/></header>
+  <main><Section/></main>
+  <footer><Footer/></footer>
+
+
       </>
   )
 }
