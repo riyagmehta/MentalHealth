@@ -6,13 +6,14 @@ import { Route } from "react-router-dom";
 import { Router } from "react-router-dom";
 import {Footer} from "./components/Footer";
 import Home from "./Pages/Home";
+import Journal from "./Pages/Journal";
 
 
 function App() {
   return (
     
     <div>
-      <Home/>
+      <Journal/>
     </div>
   );
 }
