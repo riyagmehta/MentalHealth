@@ -7,13 +7,14 @@ import { Router } from "react-router-dom";
 import {Footer} from "./components/Footer";
 import Home from "./Pages/Home";
 import Journal from "./Pages/Journal";
+import Consulting from "./Pages/Consulting";
 
 
 function App() {
   return (
     
     <div>
-      <Journal/>
+      <Consulting/>
     </div>
   );
 }
